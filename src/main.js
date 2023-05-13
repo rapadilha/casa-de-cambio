@@ -15,7 +15,8 @@ const tabelaDeValores = ({rates}) => {
     clearList(ul);
     valoresDasMoedas.forEach(([rate, currency]) => {
         const li = document.createElement('li');
-        li.innerHTML = `<b>${rate}:</b> ${currency.toFixed(3)}`;
+        li.className = 'bg-gray-500 mt-2 ml-3 mr-10 px-6 text-center rounded';
+        li.innerHTML = `<b>${rate}:</b> <span class="text-yellow-300">${currency.toFixed(3)}</span>`;
         ul.appendChild(li);
     });
 };
